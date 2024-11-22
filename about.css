@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playpen+Sans:wght@100..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    background-color: #44464d;
+    user-select: none;
+}
+header{
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+header .brand{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation{
+    position: relative;
+}
+header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a::before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:nth-child(2):before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover::before{
+    width: 100%;
+}
+
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+    height: max(55px,9vh);
+    color: #d96e37;
+}
+.title span{
+    font-size: max(30px,2.7rem);
+    font-weight: 700;
+    transform: scaley(1.6) scaleX(1.4);
+}
+.templet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: min(100vh - 9vh, 100vh - 70px);
+}
+.templet .first{
+    height: 84%;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefefe;
+    box-shadow: 0 0 15px rgba(96, 95, 95, 0.722);
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+    overflow: auto;
+}
+.templet .first:hover{
+    transform: scale(1.05);
+}
+.templet .first .profile{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 35px;
+    border: 4px solid #d96d37ad;
+}
+.templet .first .name{
+    margin-top: 15px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.templet .first .profile img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.templet .first .detalis{
+    color: #a6a6a6;
+    text-align:center;
+    margin: 15px 20px 0;
+}
+.templet .first .role{
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 650;
+}
+
+.templet .first .contect{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+.templet .first .contect a{
+    text-decoration: none;
+    color: black;
+    transition: 0.4s ease-in-out;
+}
+
+.templet .first .contect a .facebook:hover{
+    color: #415ca0;
+}
+.templet .first .contect a .twitter:hover{
+    color: #44464d;
+}
+.templet .first .contect a .instagram:hover{
+    color: #ff0892;
+}
+@media screen and (max-width: 1040px){
+    body{
+        overflow: scroll;
+    }
+
+    header{
+        padding: 12px 20px;
+    }
+    section{
+        padding: 100px 20px;
+    }
+    .home .media-icons{
+        right: 15px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+    header .navigation.active .navigation-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+    header .navigation .navigation-items a::before{
+        background: #222;
+        height: 5px;
+    }
+    header .navigation .navigation-items{
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: a40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1, 1, 1/ 20%);
+    }
+    .menu-btn{
+        background: url('/Assetes/menu.png')no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .menu-btn.active{
+        z-index: 99;
+        background: url('/Assetes/close.png')no-repeat;
+        background-size: 30px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+    .templet{
+        transition: 0.5s ease-in-out;
+        flex-direction: column;
+        margin-top: 5vh;
+    }
+    .templet .first{
+        height: 500px;
+        width: max(68vw,300px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fefefe;
+        box-shadow: 0 0 15px rgba(96, 95, 95, 0.722);
+        border-radius: 20px;
+        transition: 0.2s ease-in-out;
+    }
+    .templet .first .profile{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-top: 18px;
+        border: 4px solid #d96d37ad;
+    }
+    .title span{
+        font-size: max(25px,2.4rem);
+    }
+}

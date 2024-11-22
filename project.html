@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/project.css">
+    <link rel="shortcut icon" href="/Assetes/Project.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand">Travel</a>
+
+        <div class="menu-btn">
+
+        </div>
+
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="contectus.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="card">
+                <img src="/Assetes/Amazon.png" alt="">
+                <h2>Amazon</h2>
+                <p>Created a clone of the Amazon home page using HTML and CSS, closely mirroring its design and layout.</p>
+            </div>
+            <div class="card">
+                <img src="/Assetes/Netflix.png" alt="">
+                <h2>Netflix</h2>
+                <p>Developed a Netflix login page clone using HTML and CSS, replicating the original design.</p>
+            </div>
+            <div class="card">
+                <img src="/Assetes/Minecraft.png" alt="">
+                <h2>Minecraft </h2>
+                <p>Developed clones of the Minecraft home page and single-player page using HTML, CSS, and JavaScript, incorporating interactive elements to replicate their design and functionality.</p>
+            </div>
+            <div class="card">
+                <img src="/Assetes/portfolio2.png" alt="">
+                <h2>Portfolio</h2>
+                <p>Built responsive web page clones using HTML, CSS, and JavaScript, highlighting design accuracy and interactive features.</p>
+            </div>
+            <div class="card">
+                <img src="/Assetes/portfolio1.png" alt="">
+                <h2>Portfolio</h2>
+                <p>Created web page clones with HTML and CSS, focusing on precise design and layout.</p>
+            </div>
+            <div class="card">
+                <img src="/Assetes/food.png" alt="">
+                <h2>Food</h2>
+                <p>Built a food-inspired web page clone using HTML and CSS, highlighting a clean layout and visually appealing design.</p>
+            </div>
+            <div class="card">
+                <img src="/Assetes/Spptify.png" alt="">
+                <h2>Spotify</h2>
+                <p>Recreated a Spotify login page using HTML and CSS, focusing on replicating the design and creating a seamless user experience.</p>
+            </div>
+            
+        </div>
+    </section>
+</body>
+
+    <script>
+        const menuBtn=document.querySelector(".menu-btn");
+        const navigation=document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click",()=>{
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+    </script>
+</html>

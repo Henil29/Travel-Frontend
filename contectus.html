@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/contectus.css">
+    <link rel="shortcut icon" href="/Assetes/contect.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <title>Contact Us</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand">Travel</a>
+
+        <div class="menu-btn">
+
+        </div>
+
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="contectus.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slide active" src="/Assetes/contect-us 1.mp4" autoplay muted loop></video>
+
+        <div class="content">
+
+            <div class="details">  
+                <h1>Let's get in touch</h1>
+                <span>
+                    Whether you have a question, want to start a project or simply want to connect.<br>
+                    Feel free to send me a message in the contact form.
+            </span>
+                <br><br>
+                
+                <div class="icons">
+                <img src="/Assetes/location.png" alt="">
+                <span>
+                    Shree Amin P.J.K.P Vidhyarthi Bhavan
+                </span>
+                </div>
+                <div class="icons">
+                    <img src="/Assetes/mail.png" alt="">
+                    <span>
+                        henil247138@gmail.com
+                    </span>
+                </div>
+                <div class="icons">
+                    <img src="/Assetes/phone.png" alt="">
+                    <span>
+                        +918155033777
+                    </span>
+                </div>
+
+                <div class="contect-icon">
+                    <span>Contect with us:</span>
+                    <div class="media-icons">
+                        <a href="https://www.facebook.com/share/Avf4hti9Bgj3NnoC/?mibextid=qi2Om" target="_blank"> <i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/henil.2906?igsh=aWs1a3phYWJjNmJs" target="_blank"> <i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/HenilPatel2906?t=PF0t92Fsb-rRavSUoVnksg&s=09" target="_blank"> <i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/henil-patel-3361b3288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="message">
+                <h1>Contect Us</h1>
+                
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="1b3d6ff5-7779-4af4-8648-7b1ec183551e">
+
+                    <div class="first-input">
+                        <div class="tag">User name</div>
+                        <div class="input"><input type="text" name="Name" required></div>
+                    </div>
+                    <div class="first-input">
+                        <div class="tag">Email</div>
+                        <div class="input"><input type="email" name="Email" required></div>
+                    </div>
+                    <div class="first-input">
+                        <div class="tag">Number</div>
+                        <div class="input"><input type="number" name="Number" required></div>
+                    </div>
+                    <div class="first-input">
+                        <div class="tag">Message</div>
+                        <div class="input"><textarea name="Message" required></textarea></div>
+                    </div>
+                    <div class="send">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+    <script>
+
+        // navbar
+        const menuBtn=document.querySelector(".menu-btn");
+        const navigation=document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click",()=>{
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+    </script>
+</html>

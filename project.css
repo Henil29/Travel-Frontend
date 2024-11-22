@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    background: #44464d;
+    user-select: none;
+    color: #a6a6a6;
+
+}
+header{
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+header .brand{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation{
+    position: relative;
+}
+header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a::before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:nth-child(3):before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover::before{
+    width: 100%;
+}
+
+section{
+    padding: 90px 1em;
+}
+
+.container {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    gap: 25px;
+    margin: 0 35px;
+}
+
+.container .card {
+    padding: 0.4em;
+    border: 1px solid rgb(75, 82, 92);
+    border-radius: 10px;
+    background: #F9F6EE;
+    text-align: center;
+    height: 45vh;
+    overflow-y: auto;
+    transition: 0.2s ease-in;
+}
+.container .card:hover{
+    transform: scale(1.05);
+}
+.card img{
+    height: 76%;
+    width: 90%;
+    object-fit: cover;
+    margin: 12px 0;
+    border-radius: 15px;
+}
+.card h2{
+    margin: 12px;
+    color: #222;
+}
+
+@media(max-width:1040px){
+    header{
+        padding: 12px 20px;
+    }
+    section{
+        padding: 100px 20px;
+    }
+    .home .media-icons{
+        right: 15px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+    header .navigation.active .navigation-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+    header .navigation .navigation-items a::before{
+        background: #222;
+        height: 5px;
+    }
+    header .navigation .navigation-items{
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1, 1, 1/ 20%);
+    }
+    .menu-btn{
+        background: url('/Assetes/menu.png')no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .menu-btn.active{
+        z-index: 99;
+        background: url('/Assetes/close.png')no-repeat;
+        background-size: 30px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(325px,0.90fr));
+        gap: 25px;
+        margin: 0;
+    }
+    
+}
+
+.card::-webkit-scrollbar {
+    display: none;
+}

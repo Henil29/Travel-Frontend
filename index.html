@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="shortcut icon" href="/Assetes/travel.png" type="image/x-icon">
+    <title>Travel</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="brand">Travel</a>
+
+        <div class="menu-btn">
+
+        </div>
+
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="contectus.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slide active" src="/Assetes/1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="/Assetes/2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="/Assetes/3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="/Assetes/4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="/Assetes/5.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>Wonderful <br>
+                <span>Seaside Peace</span>
+            </h1>
+            <p>The gentle waves touch the stones on the shore, creating a calm and peaceful feeling. The sound of the waves and the fresh air bring a sense of quiet and connection to nature.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Serenity<br>
+                <span>Sunset Beauty</span>
+            </h1>
+            <p>As the sun sets, the sky glows with shades of orange, pink, and purple, reflecting on the calm ocean waves. This peaceful moment shows the quiet change from day to night.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Solitude <br>
+                <span>Quiet Sea</span>
+            </h1>
+            <p>On a small boat in the middle of the sea, the sun sets. The calm boat ride and cool air bring peace, while the quiet moment makes you feel connected to nature.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Nightfall <br>
+                <span>Starlit Silence</span>
+            </h1>
+            <p>Under the night sky filled with countless stars, the dark mountains stand tall and quiet. The cool air and stillness bring a sense of wonder and peace.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Fell Nature <br>
+                <span>Magic Twilight</span>
+            </h1>
+            <p>A peaceful view shows mountains, a winding river, and a fading sky with the first stars. Suddenly, a star breaks apart, adding mystery and beauty to the quiet night.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="media-icons">
+            <a href="https://www.facebook.com/share/Avf4hti9Bgj3NnoC/?mibextid=qi2Om" target="_blank"> <i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/henil.2906?igsh=aWs1a3phYWJjNmJs" target="_blank"> <i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/HenilPatel2906?t=PF0t92Fsb-rRavSUoVnksg&s=09" target="_blank"> <i class="fab fa-twitter"></i></a>
+        </div>
+
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script>
+
+        // navbar
+        const menuBtn=document.querySelector(".menu-btn");
+        const navigation=document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click",()=>{
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+
+        // video slider
+        const btns=document.querySelectorAll(".nav-btn")
+        const slides=document.querySelectorAll(".video-slide")
+        const contents=document.querySelectorAll(".content")
+
+        var sliderNav=function(manual){
+            btns.forEach((btn)=>{
+                btn.classList.remove("active");
+            })
+
+            slides.forEach((slide)=>{
+                slide.classList.remove("active");
+            })
+            contents.forEach((content)=>{
+                content.classList.remove("active");
+            })
+            
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+            
+        }
+        var currentIndex = 0;
+        var changeSlide = function () {
+            currentIndex = (currentIndex + 1) % btns.length;
+            sliderNav(currentIndex);
+        };
+        setInterval(changeSlide, 10000);
+        btns.forEach((btn,i)=>{
+            btn.addEventListener("click",()=>{
+                currentIndex = i;
+                sliderNav(i);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    user-select: none;
+}
+header{
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+header .brand{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation{
+    position: relative;
+}
+header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a::before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:last-child:before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover::before{
+    width: 100%;
+}
+.home video{
+    z-index: -11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home .content{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 65vh;
+    width: 48vw;
+    background-color: rgba(149, 130, 130, 0.632);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+}
+.home .content .details{
+    height: 100%;
+    width: 50%;
+}
+
+.home .content .details h1{
+    margin-bottom: 10px;
+}
+.home .content .details .icons{
+    margin-bottom: 5px;
+    display: flex;
+}
+.home .content .details .icons img{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: -7px;
+    margin-right: 10px;
+}
+.home .content .message{
+    height: 100%;
+    width: 50%;
+}
+.home .content .details .contect-icon{
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.home .content .details .contect-icon span{
+    font-weight: 500;
+}
+.home .content .details .contect-icon .media-icons{
+    margin-top: 17px;
+}
+.home .content .details .contect-icon .media-icons a{
+    background-color: #2696E9;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+.home .content .details .contect-icon .media-icons a i{
+    text-align: center;
+    font-size: 1.2em;
+}
+.message{
+    padding-left: 15px;
+}
+.message h1{
+    margin-bottom: 9px;
+}
+.message .first-input:not(:last-child){
+    margin-bottom: 10px;
+}
+.message .first-input .tag{
+    margin-left: 15px;
+}
+.message .first-input .input input{
+    border: 1px solid black;
+    color: #fff;
+    background: none;
+    height: 30px;
+    width: 90%;
+    padding: 20px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+.message .first-input .input textarea{
+    border: 1px solid black;
+    color: #fff;
+
+    background: none;
+    height: 75px;
+    width: 90%;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    resize: none;
+    overflow-y: auto;
+}
+.message .send input{
+    height: 40px;
+    width: 85px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: #2696E9;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 650;
+    transition: 0.2S;
+}
+.message .send input:hover{
+    background-color: transparent;
+    color: #2696E9;
+}
+@media(max-width:1040px){
+    header{
+        padding: 12px 20px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+    header .navigation.active .navigation-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+    header .navigation .navigation-items a::before{
+        background: #222;
+        height: 5px;
+    }
+    header .navigation .navigation-items{
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1, 1, 1/ 20%);
+    }
+    .menu-btn{
+        background: url('/Assetes/menu.png')no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn.active{
+        z-index: 99;
+        background: url('/Assetes/close.png')no-repeat;
+        background-size: 30px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+
+    .home .content {
+        flex-direction: column;
+        height: 85vh;
+        width: 60vw;
+        overflow: auto;
+    }
+
+    .home .content .details {
+        height: 100%;
+        width: 100%;
+    }
+
+    .home .content .details .contect-icon {
+        margin-top: 14px;
+        display: flex;
+    }
+    .home .content .message {
+        margin-top: 15px;
+        width: 100%;
+    }
+    .home .content .details .contect-icon .media-icons a{
+        padding: 8px 10px;
+        margin-left: 0px;
+        background-color: transparent;
+    }
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
